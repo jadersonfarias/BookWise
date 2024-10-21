@@ -10,7 +10,7 @@ import { api } from '@/lib/axios'
 import { Book, Rating as RatingType, User } from '@prisma/client'
 
 import { useQuery } from "@tanstack/react-query";
-import ProfileCardBook from "../profileCardBook ";
+import ProfileCardBook from "../profileCardBook";
 import { SearchInput } from "../SearchInput";
 import { useRouter } from "next/router";
 
