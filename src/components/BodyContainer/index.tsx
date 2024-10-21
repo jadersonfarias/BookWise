@@ -166,12 +166,12 @@ export default function BodyContainer({ title, Icon, input, profile }: types) {
             </div>
             {status === 'authenticated' && profile === true ?
                 <CardMediumBook
-                    author={lastUserReview?.book.author }
+                    author={lastUserReview?.book?.author }
                     created_at={lastUserReview?.created_at}
-                    description={lastUserReview?.book.summary}
-                    image={lastUserReview?.book.cover_url}
+                    description={lastUserReview?.book?.summary}
+                    image={lastUserReview?.book?.cover_url}
                     rate={lastUserReview?.rate}
-                    title={lastUserReview?.book.name}
+                    title={lastUserReview?.book?.name}
                 />
                 : null}
 
