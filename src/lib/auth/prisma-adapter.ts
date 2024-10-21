@@ -2,23 +2,23 @@ import { Adapter } from 'next-auth/adapters'
 import { prisma } from '../prisma'
 //import { NextApiRequest, NextApiResponse, NextPageContext } from 'next'
 
-// interface Account {
-//   userId: string; // ID do usuário associado
-//   type: string; // Tipo de conta, se aplicável
-//   provider: string; // Provedor de autenticação
-//   providerAccountId: string; // ID da conta do provedor
-//   refresh_token?: string; // Token de atualização, se aplicável
-//   access_token?: string; // Token de acesso, se aplicável
-//   expires_at?: number | null ; // Data de expiração do token
-//   token_type?: string | null; // Tipo de token, se aplicável
-//   scope?: string | null; // Escopo da autenticação, se aplicável
-//   id_token?: string | null; // Token de ID, se aplicável
-//   session_state?: string | null; // Estado da sessão, se aplicável
-// }
+interface Account {
+  userId: string; // ID do usuário associado
+  type: string; // Tipo de conta, se aplicável
+  provider: string; // Provedor de autenticação
+  providerAccountId: string; // ID da conta do provedor
+  refresh_token?: string; // Token de atualização, se aplicável
+  access_token?: string; // Token de acesso, se aplicável
+  expires_at?: number | null ; // Data de expiração do token
+  token_type?: string | null; // Tipo de token, se aplicável
+  scope?: string | null; // Escopo da autenticação, se aplicável
+  id_token?: string | null; // Token de ID, se aplicável
+  session_state?: string | null; // Estado da sessão, se aplicável
+}
 
 interface User {
   id: string; // ID único do usuário
-  name?: string | null; // Nome do usuário (opcional e pode ser nulo)
+  name: string | null // Nome do usuário (opcional e pode ser nulo)
   avatar_url: string | null; // URL do avatar (opcional e pode ser nulo)
   created_at: Date; // Data de criação do usuário
   email?: string; // Email do usuário (opcional e deve ser único)
@@ -136,8 +136,8 @@ export function PrismaAdapter(): Adapter {
       }
     },
 
-    async linkAccount(account) {
-      await prisma.account.create({
+    async linkAccount(account: Account) {
+      await prisma.account.create({ 
         data: {
           user_id: account.userId,
           type: account?.type,
