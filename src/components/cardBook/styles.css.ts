@@ -42,7 +42,18 @@ export const ContentBook = style({
 })
 
 export const InfoBook = style({
-    
+ 
+})
+
+export const ButtunText = style({
+    border: '0',
+    background: 'none',
+    color: vars.colors.purple[100],
+
+    ':hover' : {
+        color: 'white',
+        cursor: 's-resize'
+    }
 })
 
 export const H3 = style({
@@ -71,8 +82,4 @@ globalStyle(`${InfoBook} p`, {
     color: vars.colors.gray[300]
 });
 
-globalStyle(`${InfoBook} button`, {
-    border: '0',
-    background: 'none',
-    color: vars.colors.purple[100]
-});
+

@@ -5,7 +5,7 @@ import { style } from '@vanilla-extract/css';
 
 export const Container = style({
   display: 'flex',               
-  alignItems: 'end',          
+  alignItems: 'flex-end',          
   height: '100vh',              
   width: '100vw',
   gap:"5rem",
@@ -73,10 +73,10 @@ export const ExplorarCategories = style({
   color: vars.colors.purple[100],
 
   selectors: {
-    '&:focus': {
-      background: vars.colors.purple[100],
+    '&.active': {
+        background: vars.colors.purple[100],
       color: 'white'
-    },
+  },
  
   
   },
@@ -125,10 +125,10 @@ export const H2Eplorer = style({
 })
 
 export const  BookContainer = style({
-  width: '18rem',
+  width: '17.5rem',
   //height: '11.5rem',
   display: 'flex' ,
-  alignItems: 'start',
+  alignItems: 'flex-start',
   
   gap: '1.5rem',
   position: 'relative',
@@ -193,4 +193,12 @@ export const SpanComment = style({
    position: "absolute",
    top: '125px',
    right: '0'
+})
+
+export const ImageButton = style({
+    cursor: 'pointer',
+    ':hover' :{
+      transform: 'scale(1.05)',
+      boxShadow: `0px 4px 18px ${vars.colors.purple[100]}`,
+    }
 })

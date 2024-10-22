@@ -28,6 +28,9 @@ console.log(image)
     return (
         <div className={Container}>
             <main className={ContentBook}>
+            {author?.length === 0 ? (<div>
+                
+            </div>) : (<>
                 {image && (
                     <Image src={image} alt="" width={150} height={150} />
                 )}
@@ -58,6 +61,7 @@ console.log(image)
                         </p>
                     </div>
                 </div>
+            </>)}
             </main>
         </div>
     )

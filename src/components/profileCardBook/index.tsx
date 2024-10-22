@@ -1,9 +1,8 @@
 import Image from "next/image";
-//import book from '../../../public/images/books/14-habitos-de-desenvolvedores-altamente-produtivos.png'
+
 import { Container, AuthorInfo, ContentBook, DescriptionBook, H3, Span, Paragraph, SpanTime } from "./styles.css";
 import { RatingStars } from "../RatingStars";
-//import { useState } from "react";
-//import { useSession } from "next-auth/react";
+
 import { formatDistanceToNow, parseISO } from 'date-fns';
 import { ptBR } from 'date-fns/locale'
 
@@ -25,10 +24,7 @@ export default function ProfileCardBook({ author, description, image, title, rat
  const formattedTime = timeDistance.replace('cerca de ', 'há ');
 
 
-    // Função para alternar entre mostrar mais ou menos
-    // const toggleReadMore = () => {
-    //     setIsExpanded(!isExpanded);
-    // };
+
 
     return (
         <div className={Container}>

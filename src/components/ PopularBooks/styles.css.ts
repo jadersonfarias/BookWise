@@ -3,7 +3,7 @@ import { style, globalStyle } from '@vanilla-extract/css';
 
 
 export const Container = style({
-     width: '25vw',
+     width: '26vw',
      height: '78%',
 
      overflowY: 'auto',

@@ -1,4 +1,4 @@
-import { Container, Span, TextDiv } from "./styles.css";
+import { Box, ButtonAll, Container, Span, TextDiv, Title } from "./styles.css";
 import { GreaterThan, IconProps } from "@phosphor-icons/react";
 import CardBook from "../cardBook";
 import { useSession } from "next-auth/react";
@@ -112,7 +112,7 @@ export default function BodyContainer({ title, Icon, input, profile }: types) {
         }
     });
 
- 
+
     const filteredBooks = InfoBooks?.filter((rating: Rating) => {
         // Se o searchValue estiver vazio, retorna todos os livros
         if (!searchValue) {
@@ -147,7 +147,7 @@ export default function BodyContainer({ title, Icon, input, profile }: types) {
                 {status === 'authenticated' && profile === true ? (
                     <>
                         <strong>Sua última leitura</strong>
-                        <button onClick={() => handleClickRoute('explorar')}>
+                        <button onClick={() => handleClickRoute('explorar')} className={ButtonAll}>
                             Ver todos
                             <GreaterThan />
                         </button>
@@ -164,16 +164,25 @@ export default function BodyContainer({ title, Icon, input, profile }: types) {
                     </>
                 )}
             </div>
+          
             {status === 'authenticated' && profile === true ?
-                <CardMediumBook
-                    author={lastUserReview?.book?.author }
-                    created_at={lastUserReview?.created_at}
-                    description={lastUserReview?.book?.summary}
-                    image={lastUserReview?.book?.cover_url}
-                    rate={lastUserReview?.rate}
-                    title={lastUserReview?.book?.name}
-                />
-                : null}
+                lastUserReview?.book ? (
+                    <CardMediumBook
+                        author={lastUserReview?.book?.author}
+                        created_at={lastUserReview?.created_at}
+                        description={lastUserReview?.book?.summary}
+                        image={lastUserReview?.book?.cover_url}
+                        rate={lastUserReview?.rate}
+                        title={lastUserReview?.book?.name}
+                    />
+                ) : (
+                    <div className={Box}>
+                        <h1 className={Title}>
+                         Não viu nenhum livro 😞
+                        </h1>
+                    </div>
+                   
+                ) : null}
 
             {status === 'authenticated' && profile === true ? <strong >Avaliações mais recentes</strong> : null}
 
@@ -185,7 +194,7 @@ export default function BodyContainer({ title, Icon, input, profile }: types) {
                         author={rating.book.author}
                         created_at={rating.created_at}
                         title={rating.book.name}
-                        description={rating.description}
+                        description={rating.book.summary}
                         image={rating.book.cover_url}
                         avatar_url={rating.user.avatar_url}
                         user={rating.user.name}

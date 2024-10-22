@@ -14,7 +14,7 @@ export const Container = style({
 
 export const ProfileHeader = style({
     display: 'flex',
-    alignItems: 'start',
+    alignItems: 'flex-start',
     justifyContent: 'space-between',
     marginBottom: '1rem',
     gap: '8px'

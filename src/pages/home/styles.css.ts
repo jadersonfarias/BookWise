@@ -5,7 +5,7 @@ import { style } from '@vanilla-extract/css';
 export const HomeContainer = style({
   display: 'flex',              
   flexWrap: 'nowrap',  
-  alignItems: 'end',          
+  alignItems: 'flex-end',          
   height: '100vh',              
   width: '100vh',
   gap:"3rem",

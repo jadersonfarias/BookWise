@@ -1,6 +1,6 @@
 import Image from "next/image";
 //import book from '../../../public/images/books/14-habitos-de-desenvolvedores-altamente-produtivos.png'
-import { Container, UserImage, ProfileHeader, UserInfo, ContentBook, InfoBook,  H3 } from "./styles.css";
+import { Container, UserImage, ProfileHeader, UserInfo, ContentBook, InfoBook,  H3, ButtunText } from "./styles.css";
 import { RatingStars } from "../RatingStars";
 import { useState } from "react";
 //import { useSession } from "next-auth/react";
@@ -64,7 +64,7 @@ export default function CardBook({author, description, image, title, created_at,
                     </h3>
                     <p>
                         {isExpanded ? description : `${text.substring(0, 230)}...`} {/* Mostra parte do texto */}
-                        <button onClick={toggleReadMore}>
+                        <button onClick={toggleReadMore} className={ButtunText}>
                             {isExpanded ? "Ver mais" : "Ver menos"}
                         </button>
                     </p>

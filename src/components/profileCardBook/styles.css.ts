@@ -55,7 +55,7 @@ export const Span = style({
     fontSize: vars.fontSizes.sm,
     color: vars.colors.gray[400],
     display: 'flex',
-    justifyContent: 'end',
+    justifyContent: 'flex-end',
     marginTop: '-0.5rem'
  })
  

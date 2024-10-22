@@ -20,7 +20,9 @@ export const Container = style({
  export const TextDiv = style({
    display: "flex",
    justifyContent: 'space-between',
-   paddingTop: '2.5rem'
+   alignItems: 'center',
+   paddingTop: '2.5rem',
+   marginBottom: '1rem'
   });
 
 
@@ -37,18 +39,37 @@ export const FormError = style({
 })
 
 
+export const ButtonAll = style({
+  display: 'flex',
+  alignItems: 'center',
+  background: 'none',
+  color: vars.colors.purple[100],
+  border: '0',
 
- globalStyle(`${TextDiv} button`, {
-      display:'flex',
-      alignItems: 'center',
-      gap: '0.3rem',
-
-      paddingBottom: '1.25rem',
-      border: '0',
-      background: 'none',
-      color: vars.colors.purple[100],
-      fontSize: vars.fontSizes.md,
+  ":hover" : {
+    color: 'white'
+  } 
 })
+
+export const Title = style({
+  textShadow: '2px 2px 1px rgba(0, 0, 0, 0.5)',
+  color: vars.colors.purple[100]
+})
+
+export const Box = style({
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+
+    background: vars.colors.gray[600],
+    height: '7rem',
+   marginBottom: '1rem',
+
+   borderRadius: vars.radii.md
+})
+
+
+
 
 globalStyle(`${TextDiv} strong`, {
      fontSize: vars.fontSizes.md,

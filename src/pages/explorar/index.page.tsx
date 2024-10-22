@@ -1,5 +1,5 @@
 import Sidebar from '@/components/Sidebar'
-import { ButtonCategories, Container, Content, ExplorarCategories, BookContainer, BookContent, BookImage, GridContainer, DivFlex, SpanExplorar, ExplorarBooksContainer, BoxInput, H2Eplorer, SpanComment } from './styles.css'
+import { ButtonCategories, Container, Content, ExplorarCategories, BookContainer, BookContent, BookImage, GridContainer, DivFlex, SpanExplorar, ExplorarBooksContainer, BoxInput, H2Eplorer, SpanComment, ImageButton } from './styles.css'
 
 import { User } from '@phosphor-icons/react'
 
@@ -125,7 +125,7 @@ export default function Explorar() {
                         {categories?.map((categorie) => (
                             <button
                                 key={categorie.id}
-                                className={ButtonCategories}
+                                className={`${ButtonCategories} ${selectedTag === categorie.id ? 'active' : ''}`}
                                 onClick={() => handleSelectTag(categorie.id)}>
                                 {categorie.name}
                             </button>
@@ -140,7 +140,7 @@ export default function Explorar() {
                                 return (
                                     <div className={BookContainer} key={book.id}>
                                         <div className={BookImage}>
-                                            <Image src={book.cover_url} width={76} height={115} alt='livros' onClick={() => handleOpenModal(book.id)} style={{ cursor: 'pointer' }} />
+                                            <Image src={book.cover_url} width={76} height={115} alt='livros' onClick={() => handleOpenModal(book.id)} className={ImageButton} />
                                         </div>
                                         <div className={BookContent}>
                                             <div>
