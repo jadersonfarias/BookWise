@@ -19,13 +19,19 @@ const nextConfig = {
   pageExtensions: ['page.tsx', 'api.ts', 'api.tsx'],
 
   images: {
-   // domains: ['lh3.googleusercontent.com'],
-    domains: ['avatars.githubusercontent.com', 'lh3.googleusercontent.com', 'images.unsplash.com'], 
+  
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'github.com',
-        pathname: '/jadersonfarias.png',
+        hostname: 'avatars.githubusercontent.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'lh3.googleusercontent.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
       },
     ],
   },
