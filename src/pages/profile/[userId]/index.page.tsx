@@ -7,6 +7,7 @@ import ProfileCard from '@/components/profileCard'
 import { useQuery } from '@tanstack/react-query'
 import { api } from '@/lib/axios'
 import { useRouter } from 'next/router'
+import { NextSeo } from 'next-seo'
 
 export interface ProfileRating extends Rating {
     book: Book & {
@@ -45,6 +46,8 @@ export default function Profile() {
       })
 
     return (
+      <>
+        <NextSeo title={`${user?.user.name}'s Profile | BookWise`} />
         <div className={Container}>
             <Sidebar/>
 
@@ -60,5 +63,6 @@ export default function Profile() {
                 />
             </div>
         </div>
+      </>
     )
 }

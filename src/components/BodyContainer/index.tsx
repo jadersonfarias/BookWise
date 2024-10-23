@@ -159,8 +159,8 @@ export default function BodyContainer({ title, Icon, input, profile }: types) {
                 ) : (
                     <>
                         <strong>Avaliações mais recentes</strong>
-                        <button>
-                        </button>
+                        <>
+                        </>
                     </>
                 )}
             </div>

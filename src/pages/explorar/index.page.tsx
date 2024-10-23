@@ -14,6 +14,7 @@ import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { BookModal } from '@/components/bookModal'
 import { SearchInput } from '@/components/SearchInput'
+import { NextSeo } from 'next-seo'
 
 
 export interface BookData {
@@ -107,6 +108,8 @@ export default function Explorar() {
 
 
     return (
+        <>
+       <NextSeo title="Explorar | BookWise" />
         <div className={Container}>
             <Sidebar />
 
@@ -166,5 +169,6 @@ export default function Explorar() {
                 <BookModal bookId={selectedBookId} onClose={handleCloseModal} />
             )}
         </div>
+        </>
     )
 }

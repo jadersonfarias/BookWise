@@ -52,7 +52,7 @@ export const LoginContainer = style({
 export const Button = style({
     all: "unset",
     width: '100%',
-
+    cursor: 'pointer',
     display:'flex',
     alignItems:'center',
     justifyContent: 'flex-start',
