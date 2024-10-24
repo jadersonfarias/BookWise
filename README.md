@@ -1,40 +1,75 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# BookWise  
+**BookWise Preview**  
 
-## Getting Started
+## Sobre o Projeto  
+**BookWise** é uma aplicação web full-stack desenvolvida inteiramente por um único desenvolvedor (eu 👨‍💻), funcionando como uma rede social literária. Ela permite que os usuários interajam com livros, compartilhem resenhas e descubram novas leituras dentro de uma comunidade vibrante. A aplicação oferece uma experiência de usuário intuitiva, incluindo recomendações personalizadas, perfis de usuário e uma interface completa de exploração.
 
-First, run the development server:
+## Funcionalidades  
+- **Descoberta de Livros**: Usuários podem explorar uma vasta coleção de livros, categorizados por gênero ou através de uma função de busca.  
+- **Recomendações Populares**: A página inicial exibe recomendações com base nas últimas resenhas da comunidade.  
+- **Perfis de Usuário**: Cada usuário possui um perfil onde pode acompanhar seu progresso de leitura, visualizar o histórico de resenhas e se conectar com outros usuários.  
+- **Engajamento Comunitário**: A aplicação incentiva a interação ao destacar resenhas recentes, livros populares e tópicos em alta na comunidade.  
+
+## Tecnologias Utilizadas  
+- **Next.js 14**  
+- **TypeScript**  
+- **Prisma**  
+- **PostgreSQL**  
+- **vanilla-extract**  
+- **Zod**  
+- **radix-ui**
+- **react-query**
+- **Mais**: Confira o código para descobrir 😁  
+
+---
+
+## Acessando o Projeto  
+Você pode usar o projeto tanto **online** quanto **localmente**.  
+
+### **Online**  
+- [Clique aqui para acessar o projeto](https://book-wise-red.vercel.app)  
+
+### **Localmente** 
+1. Clone este repositório  
+   ```bash
+   git clone https://github.com/jadersonfarias/BookWise
+   
+## Instalação e Configuração    
 
 ```bash
+# Instalar dependências
+npm install
+
+# Configurar o banco de dados PostgreSQL e atualizar as chaves no arquivo .env
+
+# PostgreSQL Keys
+POSTGRES_PRISMA_URL=
+POSTGRES_URL_NON_POOLING=
+
+# Google OAuth
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+
+# GitHub OAuth
+GITHUB_ID=
+GITHUB_SECRET=
+
+# NextAuth Secret
+NEXTAUTH_SECRET=
+
+# Executar migrações do banco de dados
+npx prisma migrate dev
+
+# Iniciar o projeto
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+## Uso
+Ao abrir o app, você encontrará a tela de login, onde pode escolher fazer login usando sua conta do GitHub ou Google. Se preferir, você pode entrar como convidado.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Nota: Usuários convidados têm acesso limitado às funcionalidades.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Após o login, você será redirecionado para a página inicial, onde poderá explorar resenhas recentes e livros populares. Utilize a seção Explorar para navegar por gêneros ou usar a função de busca para encontrar títulos específicos. Clique em qualquer livro no explorar para acessar mais detalhes, postar uma resenha e interagir com resenhas de outros usuários.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+OBS: Projeto feito para desktop 
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
