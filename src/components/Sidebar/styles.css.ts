@@ -30,22 +30,40 @@ export const ButtonNav = style({
   background: 'none',
   border: 'none',
 
+  cursor: 'pointer',
 
   color:vars.colors.gray[400],
   display: "flex",
   alignItems: 'center',
   padding: '0.4rem 1rem',
-  gap: '1.6rem',
+  gap: '1.8rem',
   fontSize: vars.fontSizes.lg,
+  position: 'relative',
 
     selectors: {
-     '&:focus': {
-        color: 'white',
-        borderImage: `linear-gradient(180deg, #7FD1CC 0%, #9694F5 100%) 1`,
-        borderLeft: '3px solid white',
-        borderImageSlice: 1,
-        borderRadius: vars.radii.full
-   },
+  
+   '&:focus:before': {
+    content: '',
+    width: '5px',
+    height: '39px',
+
+    background: vars.colors['gradient-horizontal'],
+    borderRadius: vars.radii.full,
+
+    position: 'absolute',
+    marginLeft: '-1rem',
+  },
+
+   
+  '&:active:before': {
+    content: '""', // Mostra o pseudo-elemento quando o botão é clicado
+    width: '5px',
+    height: '39px',
+    background: vars.colors['gradient-horizontal'],
+    borderRadius: vars.radii.full,
+    position: 'absolute',
+    marginLeft: '-1rem',
+  },
    
   },
 
@@ -89,12 +107,15 @@ export const ButtonSidebar = style({
 
 
   selectors: {
-    '&:focus': {
-      borderImage: `linear-gradient(180deg, #7FD1CC 0%, #9694F5 100%) 1`,
-      borderLeft: '3px solid white',
-      borderImageSlice: 1,
-    },
- 
+'&:active:before': {
+    content: '""', 
+    width: '5px',
+    height: '39px',
+    background: vars.colors['gradient-horizontal'],
+    borderRadius: vars.radii.full,
+    position: 'absolute',
+    marginLeft: '-1rem',
+  },
   
   },
   

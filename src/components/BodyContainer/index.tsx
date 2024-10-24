@@ -209,7 +209,7 @@ export default function BodyContainer({ title, Icon, input, profile }: types) {
                         author={rating.book.author}
                         created_at={rating.created_at}
                         title={rating.book.name}
-                        description={rating.book.summary}
+                        description={rating.description}
                         image={rating.book.cover_url}
                     />
                 ))

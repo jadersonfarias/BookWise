@@ -44,16 +44,16 @@ export default function Sidebar() {
                     <Image src={logo} alt="" />
                 </div>
                 <button className={ButtonNav}  onClick={() => handleClickRoute('home')}>
-                    <TrendUp size={24} />
+                    <TrendUp size={30} />
                     início
                 </button>
                 <button className={ButtonNav}  onClick={() => handleClickRoute('explorar')}>
-                    <Binoculars size={24} />
+                    <Binoculars size={30} />
                     Explorar
                 </button>
                 {status  === 'authenticated'  ?
                     <button className={ButtonNav}   onClick={() => handleClickMenu(`profile/${userId}`)}>
-                        <User size={24} />
+                        <User size={30} />
                         Perfil
                     </button>
                     : null}
@@ -64,7 +64,7 @@ export default function Sidebar() {
                  <button onClick={handleSignOut} className={ButtonSidebar} >
                     <Image src={user.user.avatar_url} alt="Avatar" width={30} height={30} />                                   
                       {user.user.name}                   
-                     <ArrowLineLeft color="#F75A68" size={24}/>
+                     <ArrowLineLeft color="#F75A68" size={40}/>
                  </button>
                
 
@@ -72,7 +72,7 @@ export default function Sidebar() {
                   
                     <button className={ButtonSidebar} onClick={() => handleClickRoute('')}>
                         Login
-                        <ArrowLineRight color="#50B2C0" size={24} />
+                        <ArrowLineRight color="#50B2C0" size={40} />
                     </button>
                 )}
             </footer>
