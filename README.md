@@ -7,8 +7,8 @@
 ## Funcionalidades  
 - **Descoberta de Livros**: Usuários podem explorar uma vasta coleção de livros, categorizados por gênero ou através de uma função de busca.  
 - **Recomendações Populares**: A página inicial exibe recomendações com base nas últimas resenhas da comunidade.  
-- **Perfis de Usuário**: Cada usuário possui um perfil onde pode acompanhar seu progresso de leitura, visualizar o histórico de resenhas e se conectar com outros usuários.  
-- **Engajamento Comunitário**: A aplicação incentiva a interação ao destacar resenhas recentes, livros populares e tópicos em alta na comunidade.  
+- **Perfis de Usuário**: Cada usuário possui um perfil onde pode acompanhar seu progresso de leitura, visualizar o histórico de seus comentários.  
+- **Engajamento Comunitário**: A aplicação incentiva a interação ao destacar comentários recentes, livros populares e tópicos em alta na comunidade.  
 
 ## Tecnologias Utilizadas  
 - **Next.js 14**  
@@ -68,7 +68,7 @@ Ao abrir o app, você encontrará a tela de login, onde pode escolher fazer logi
 
 Nota: Usuários convidados têm acesso limitado às funcionalidades.
 
-Após o login, você será redirecionado para a página inicial, onde poderá explorar resenhas recentes e livros populares. Utilize a seção Explorar para navegar por gêneros ou usar a função de busca para encontrar títulos específicos. Clique em qualquer livro no explorar para acessar mais detalhes, postar uma resenha e interagir com resenhas de outros usuários.
+Após o login, você será redirecionado para a página inicial, onde poderá explorar resenhas recentes e livros populares. Utilize a seção Explorar para navegar por gêneros ou usar a função de busca para encontrar títulos específicos. Clique em qualquer livro no explorar para acessar mais detalhes, postar um comentários e interagir com comentários de outros usuários.
 
 OBS: Projeto feito para desktop 
 
