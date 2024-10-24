@@ -216,7 +216,7 @@ export default function BodyContainer({ title, Icon, input, profile }: types) {
                 ):(
                     <div className={Box}>
                     <h1 className={Title}>
-                        Nem nenhum livro comentado😞
+                        Nenhum livro comentado😞
                     </h1>
                 </div>
                 )
