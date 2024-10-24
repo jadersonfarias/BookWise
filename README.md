@@ -1,6 +1,6 @@
 # BookWise  
 **BookWise Preview**  
-
+![Texto alternativo](https://raw.githubusercontent.com/jadersonfarias/Bookwise/main/public/projeto.png)
 ## Sobre o Projeto  
 **BookWise** é uma aplicação web full-stack desenvolvida inteiramente por um único desenvolvedor (eu 👨‍💻), funcionando como uma rede social literária. Ela permite que os usuários interajam com livros, compartilhem resenhas e descubram novas leituras dentro de uma comunidade vibrante. A aplicação oferece uma experiência de usuário intuitiva, incluindo recomendações personalizadas, perfis de usuário e uma interface completa de exploração.
 
