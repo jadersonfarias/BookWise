@@ -24,18 +24,24 @@ export const Container = style({
     fontSize: vars.fontSizes.md,
    });
 
- globalStyle(`${TextDiv} button`, {
- display:'flex',
- alignItems: 'center',
- gap: '0.3rem',
- fontSize: vars.fontSizes.md,
 
- paddingBottom: '1rem',
- border: '0',
- background: 'none',
- color: vars.colors.purple[100],
- 
-})
+   export const ButtonAll = style({
+     display:'flex',
+     alignItems: 'center',
+     gap: '0.3rem',
+     fontSize: vars.fontSizes.md,
+   
+     paddingBottom: '1rem',
+     border: '0',
+     background: 'none',
+     color: vars.colors.purple[100],
+     
+     ":hover": {
+       color: 'white'
+     }
+   });
+
+
 
 globalStyle(`${TextDiv} span`, {
       paddingBottom: '1rem'

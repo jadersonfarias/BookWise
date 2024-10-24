@@ -53,12 +53,6 @@ export default async function handler(
   ? userById?.Rating.reduce((acc, rating) => acc + rating.book.total_pages, 0)
   : 0;
 
-    // const readPages = userById?.Rating
-    //   ? userById?.Rating.reduce(
-    //       (acc, rating) => acc + rating.book.total_pages,
-    //       0,
-    //     )
-    //   : []
 
     const ratedBooks = userById?.Rating.length
     

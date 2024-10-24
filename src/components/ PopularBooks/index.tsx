@@ -1,5 +1,5 @@
 import { GreaterThan } from "@phosphor-icons/react";
-import { Container, TextDiv } from "./styles.css";
+import { ButtonAll, Container, TextDiv } from "./styles.css";
 import CardBookSmall from "../cardBookSmall";
 import { useQuery } from "@tanstack/react-query";
 import { api } from "@/lib/axios";
@@ -32,7 +32,7 @@ const router = useRouter()
         <div className={Container}>
             <div className={TextDiv}>
                 <span>Livros populares</span>
-                <button onClick={() => {handleClickRoute('explorar')}}>
+                <button onClick={() => {handleClickRoute('explorar')}} className={ButtonAll}>
                     Ver todos
                     <GreaterThan />
                 </button>

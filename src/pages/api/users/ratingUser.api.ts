@@ -9,6 +9,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
       const session = await getSession({ req }); // pega requisão session
 
+      console.log(session, req.headers)
+
       if (!session) {
           return res.status(401).json({message: "Usuário não autenticado"})
         }

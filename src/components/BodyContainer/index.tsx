@@ -97,7 +97,7 @@ export default function BodyContainer({ title, Icon, input, profile }: types) {
         enabled: !!data?.user.id
 
     })
-    console.log(lastUserReview)
+
 
     function handleClickRoute(page: string) {
         router.push(`/${page}`)
@@ -164,7 +164,7 @@ export default function BodyContainer({ title, Icon, input, profile }: types) {
                     </>
                 )}
             </div>
-          
+
             {status === 'authenticated' && profile === true ?
                 lastUserReview?.book ? (
                     <CardMediumBook
@@ -178,10 +178,10 @@ export default function BodyContainer({ title, Icon, input, profile }: types) {
                 ) : (
                     <div className={Box}>
                         <h1 className={Title}>
-                         Não viu nenhum livro 😞
+                            Não viu nenhum livro 😞
                         </h1>
                     </div>
-                   
+
                 ) : null}
 
             {status === 'authenticated' && profile === true ? <strong >Avaliações mais recentes</strong> : null}
@@ -201,6 +201,7 @@ export default function BodyContainer({ title, Icon, input, profile }: types) {
                     />
                 ))
             ) : (
+                filteredBooks && filteredBooks.length > 0? (
                 filteredBooks?.map((rating: Rating) => (
                     <ProfileCardBook
                         key={rating.id}
@@ -212,6 +213,13 @@ export default function BodyContainer({ title, Icon, input, profile }: types) {
                         image={rating.book.cover_url}
                     />
                 ))
+                ):(
+                    <div className={Box}>
+                    <h1 className={Title}>
+                        Nem nenhum livro comentado😞
+                    </h1>
+                </div>
+                )
             )}
 
         </div>
