@@ -28,6 +28,7 @@ Você pode usar o projeto tanto **online** quanto **localmente**.
 
 ### **Online**  
 - [Clique aqui para acessar o projeto](https://book-wise-red.vercel.app)  
+- obs: como esta aplicação está no ar com um host gratuito pode ser lento as vezes
 
 ### **Localmente** 
 1. Clone este repositório  
